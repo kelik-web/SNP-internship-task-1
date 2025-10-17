@@ -254,7 +254,7 @@ a {
 .link--black{
   color: var(--black);
 }
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine) {
   .link:hover{
     text-decoration: underline;
     text-decoration-thickness: 2px;      
@@ -388,7 +388,7 @@ h3{
   border:none;
   transition: 0.3s ease;
 }
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine) {
 .hero__button:hover{
   background-color: var(--orange-200);
   color:var(--white)
@@ -457,7 +457,7 @@ h3{
   background:none;
   border:none;
 }
-@media (hover: hover){
+@media (hover: hover) and (pointer: fine) {
   .tours__navigation-button:hover{
    text-decoration: underline;
    text-underline-offset: 6px
@@ -550,7 +550,7 @@ width: 100%;
   z-index: -1;
   display: none;
   } 
-  @media (hover: hover) {
+  @media (hover: hover) and (pointer: fine) {
   .card:hover .card__image{
    transform: scale(1.2);
    }
@@ -642,13 +642,15 @@ width: 100%;
   gap: 8px;
 }
 .form__input{
+  -webkit-appearance: none;
+  width: 100%;
   border-radius: 10px;
   padding: 20px;
   outline: 1px solid var(--beige-200);
   background-color: var(--beige-100);
   border: none;
 }
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine) {
  .form__input:hover{
   cursor: pointer;
   background-color: var(--beige-200);
@@ -662,8 +664,13 @@ width: 100%;
   text-transform: uppercase;
 }
 /*Костыльное решение до JS */
-.form__input[type="date"]:not(:valid) {
-    color: gray;
+.form__input[type="date"]:not(:focus):not(:valid) {
+    color: transparent;
+}
+.form__input--date:not(:focus):not(:valid)::before {
+    position: absolute;
+    content: "ДД.ММ.ГГГГ";
+    color: var(--gray-300);
 }
 input[type="date"]::-webkit-calendar-picker-indicator {
   display: none;
@@ -684,7 +691,6 @@ input[type="date"]::-ms-clear {
 .form__select{
   min-height: 46px;
   color: var(--gray-300); 
-  appearance: none;
   background-image: url(./icons/select-dropdown.svg);
   background-repeat: no-repeat;
   background-position: 95% center;
@@ -740,7 +746,7 @@ select::-ms-expand {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url(./icons/radiobox_checked.png);
+  background-image: url(./icons/radiobox__checked.svg);
   background-repeat: no-repeat;
   background-position:  center;
 }
@@ -781,7 +787,7 @@ select::-ms-expand {
   background-color: var(--green-100);
   color: var(--green-400);
 }
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine) {
   .form__button--submit:hover{
     background-color: var(--green-300);
   }
@@ -1007,7 +1013,7 @@ border-radius: 50%;
     display: flex;
     gap: 35px;
 }
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine){
 .story:hover .link__more::before{
     display: block;
   }
