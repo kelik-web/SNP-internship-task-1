@@ -251,18 +251,20 @@ a {
   color: var(--white);
   text-decoration: none;
 }
-.link:hover{
-  text-decoration: underline;
-  text-decoration-thickness: 2px;      
-}
 .link--black{
   color: var(--black);
 }
-.link--intext:active{
-  color: var(--green-400);
-}
-.link--sm:active{
-  color: var(--orange-200);
+@media (hover: hover) {
+  .link:hover{
+    text-decoration: underline;
+    text-decoration-thickness: 2px;      
+  }
+  .link--intext:active{
+    color: var(--green-400);
+  }
+  .link--sm:active{
+    color: var(--orange-200);
+  }
 }
 button {
   color: var(--white);
@@ -536,27 +538,28 @@ width: 100%;
   mask-size: cover;
 }
 .link__more::before{
+  box-sizing: content-box;
   content: "";
   background-color: var(--green-400);
-  width: 199px;
-  height: 42px;
+  width: 100%;
+  height: 100%;
   border-radius: 50px;
   padding: 7px 20px;
   position: absolute;
-  left: -22px;
+  left: -1rem;
   z-index: -1;
-  
   display: none;
   } 
-.card:hover .card__image{
-  transform: scale(1.2);
+  @media (hover: hover) {
+  .card:hover .card__image{
+   transform: scale(1.2);
+   }
+  .card:hover .link__more::before{
+     display: block;
+   }
+  .link__more:active::before {
+   background-color: var(--orange-200);
   }
-.card:hover .link__more::before{
-    display: block;
-  }
-.link__more:active::before {
-  background-color: var(--orange-200);
-  
 }
 @media screen and (max-width: 1024px) {
   .tours__content {
@@ -657,6 +660,22 @@ width: 100%;
 
 .form__input--date {
   text-transform: uppercase;
+}
+/*Костыльное решение до JS */
+.form__input[type="date"]:not(:valid) {
+    color: gray;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+input[type="date"]::-moz-calendar-picker-indicator {
+  display: none;
+}
+input[type="date"]::-ms-clear {
+  display: none;
+  width : 0;
+  height: 0;
 }
 .form__input::placeholder{
   color: var(--gray-300);
@@ -988,13 +1007,14 @@ border-radius: 50%;
     display: flex;
     gap: 35px;
 }
+@media (hover: hover) {
 .story:hover .link__more::before{
     display: block;
   }
 .story:hover .story__image{
   transform: scale(1.2);
   } 
-
+} 
 @media  screen and (max-width:768px) {
   .tour-history__content{
     gap: 20px;
