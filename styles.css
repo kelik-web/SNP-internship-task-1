@@ -339,6 +339,7 @@ h3{
   }
   .p-normal,.p-small {
     font-size: 16px;
+    line-height: 1.42;
   }
 }
 /*Шапка и хиро блок */
@@ -716,7 +717,9 @@ input[type="date"]::-ms-clear {
 .form__input::placeholder{
   color: var(--gray-300);
 }
-/*Заглушка до JS */
+.form__select.selected{
+  color: black;
+}
 .form__select{
   min-height: 46px;
   color: var(--gray-300); 
@@ -847,6 +850,7 @@ select::-ms-expand {
   }
   .tour-creation__form{
     padding: 20px;
+    padding-bottom: 40px;
     border-radius: 30px;
   }
   .form__wrap{
@@ -1120,7 +1124,7 @@ border-radius: 50%;
 .footer__list{
   display: flex;
   gap:25px
-}
+} 
 .footer__link{
   display: flex;
   align-items: center;
@@ -1128,8 +1132,14 @@ border-radius: 50%;
 }
 @media screen and (max-width:768px) {
   .footer__container{
-    padding-block: 21px;
-    gap: 7px;
+    padding-block: 23.5px;
+    gap: 7px; 
     flex-direction: column;
+  }
+  .footer__list{
+    gap: 15px;
+  }
+  .footer__link {
+    gap: 5px;
   }
 }

@@ -166,16 +166,16 @@
                     <h2 class="header__title">Собери свой тур</h2>
                     <p class="header__info p-normal">Идейные соображения высшего порядка, а также рамки и место обучения кадров</p>
                 </header>
-                <form  method="post" class="tour-creation__form">
+                <form  method="post" action="#tours" class="tour-creation__form">
                     <div class="form__wrap">
                         <div class="form__group p-normal">
                     <label class="form__label" for="name">Имя</label>
-                      <input class="form__input" type="text" name="name" id="name" placeholder="Введите Ваше имя" required>     
+                      <input class="form__input" type="text" name="name" id="name" placeholder="Введите Ваше имя" autocomplete="name" required>     
                         </div>
                         <div class="form__group  p-normal">
                         <label class="form__label" for="tour-selection">Направление</label>
                         <select class=" form__input form__select" name="tour-selection" id="tour-selection">
-                            <option   disabled selected hidden>Куда хотите ехать</option>
+                            <option  value="" disabled selected hidden>Куда хотите ехать</option>
                             <option class="select__option" value="Belgium">Бельгия</option>
                             <option class="select__option" value="France">Франция</option>
                             <option class="select__option" value="Sweden">Швеция</option>
@@ -183,11 +183,11 @@
                         </div>
                         <div class="form__group p-normal">
                     <label class="form__label" for="email">Email</label>
-                        <input class="form__input" type="email" name="email" id="email" placeholder="example@mail.com" required>
+                        <input class="form__input" type="email" name="email" id="email" placeholder="example@mail.com" autocomplete="email" required>
                         </div>
                         <div class="form__group p-normal">
                     <label class="form__label" for="phone">Телефон</label>
-                        <input class="form__input" type= "tel"  name="phone" id="phone" placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _" required>
+                        <input class="form__input" type= "tel"  name="phone" id="phone" placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _" autocomplete="tel" required>
                         </div>
                         <div class="form__group p-normal">
                         <label class="form__label" for="date-from">Дата от</label>
@@ -226,7 +226,7 @@
                             </label>
                         </div>
                         <fieldset  class="form__actions p-normal">
-                            <a href="#tours" class="form__button form__button--submit">
+                            <button type="button" class="form__button form__button--submit">
                         <span class="p-normal">Найти тур</span>
                             </a>
                             <button type="reset" class="form__button form__button--reset">
@@ -418,6 +418,7 @@
             </ul>
         </div>
     </footer>
+    <script src="https://unpkg.com/imask"></script>
     <script src="script.js"></script>
 </body>
 </html> 
