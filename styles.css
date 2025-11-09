@@ -219,6 +219,7 @@ svg * {
 --gray-300: #a6a6a6;
 --gray-200: #d9dfdb;
 --gray-100: #f1f3f2;
+--fixed-menu-bg-color: #F3EFE899;
 --font-family-base: "Roboto", sans-serif;
 --transition: transform 0.3s ease;
 --card-linear-gradient: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%);
@@ -347,10 +348,33 @@ h3{
   background-size: cover;
   background-position: center;
 }
+.header {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.header.header--fixed{
+  z-index: 100;
+  position: fixed;
+  background-color: var(--fixed-menu-bg-color);
+  backdrop-filter: blur(27px);
+ animation: ani 1.5s forwards;  
+}
+.header--fixed .header__navigation-link {
+  color: black;
+}
+.header--fixed .header__logo-image {
+  fill: black;
+}
+.header--fixed .header__number {
+  color: black;
+}
+@keyframes ani {
+  0% {opacity: 0;}
+  100% {opacity: 1;} }
 .header__container {
   height: 88px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
   margin-bottom: 0px;
   text-wrap: nowrap;
@@ -364,6 +388,9 @@ h3{
 }
 .header__navigation-link:hover{
   text-underline-offset: 5px;
+}
+.hero {
+  padding-top: 88px;
 }
 .hero__container {
   color: var(--white);
@@ -642,6 +669,7 @@ width: 100%;
   gap: 8px;
 }
 .form__input{
+  appearance: none;
   -webkit-appearance: none;
   width: 100%;
   min-height: 43px;
