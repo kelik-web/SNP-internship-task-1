@@ -8,9 +8,7 @@ var form = document.querySelector('.tour-creation__form');
 if(header) {
   window.addEventListener('scroll', function () {
       var scrollStartPosition = window.scrollY > 450;
-      if(scrollStartPosition) {
           header.classList.toggle("header--fixed", scrollStartPosition)
-      }
   })
 }
 //Изменение цвета селекта
