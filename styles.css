@@ -335,16 +335,16 @@ h3{
   } 
   .p-big{ 
     font-size: 16px;
-    line-height: 1.42;
+    line-height: 1.427;
   }
   .p-normal,.p-small {
     font-size: 16px;
-    line-height: 1.42;
+    line-height: 1.438;
   }
 }
 /*Шапка и хиро блок */
 .top-section{
-  background-image: url(./images/layout/hero-bg.png);
+  background-image: url(./images/layout/hero-bg.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -444,6 +444,7 @@ h3{
 @media (max-width:768px) {
   .header__container {
   padding-inline: 20px;
+  padding-block: 32.2px;
   }
   .header__logo-image {
     width: 133px;
@@ -517,19 +518,13 @@ width: 100%;
 }
 .card__image {
   position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  z-index: 0;
   transition: var(--transition);
 }
 .card__image::before{
-  
+  position: absolute;
   content: "";
-  display: block;
   width: 100%;
   height: 100%;
-
   background-image: var(--card-linear-gradient);
   background-size: cover;
   background-position: center;
@@ -602,6 +597,9 @@ width: 100%;
   .tours__header{
     gap: 30px;
   }
+  .tours__navigation-item {
+    height: 23px;
+  }
   .tours__content {
     grid-template-columns: 1fr;
   }
@@ -619,27 +617,6 @@ width: 100%;
     gap: 10px;
   }
 }
-/* Фоны для карточек */
-.card-1 {
-  background-image:  url(./images/tours/tour-camp.jpg);
-}
-.card-2 {
-  background-image: url(./images/tours/tour-desert-girl.jpg);
-}
-.card-3 {
-  background-image: url(./images/tours/tour-mountain-view.jpg);
-}
-.card-4 {
-  background-image: url(./images/tours/tour-old-street.jpg);
-}
-.card-5 {
-  background-image: url(./images/tours/tour-sea-houses.jpg);
-}
-.card-6 {
-  background-image: url(./images/tours/tour-lake-mountains.jpg);
-}
-
-
 
 
 .tour-creation__form {
@@ -988,13 +965,13 @@ border-radius: 50%;
 }
 
 .story__image-1{
-  background-image: url(./images/stories/story-sea-camp.jpg);;
+  background-image: url(./images/stories/story-sea-camp.webp);;
 }
 .story__image-2{
-  background-image: url(./images/stories/story-forest-camping.jpg);
+  background-image: url(./images/stories/story-forest-camping.webp);
 }
 .story__image-3{
-  background-image: url(./images/stories/story-evening-sea.jpg);
+  background-image: url(./images/stories/story-evening-sea.webp);
 }
 
 .story{
@@ -1041,7 +1018,7 @@ border-radius: 50%;
   }
   .story{
     min-height: 455px;
-    border-radius: 30px;
+    border-radius: 20px;
     padding: 30px;
   }
   .story__header{
@@ -1084,6 +1061,7 @@ border-radius: 50%;
   }
   .cta__image-wrapper{
     max-width: 130px ;
+    height: 133px;
     border-radius: 20px;
   }
   .cta__description{

@@ -4,6 +4,7 @@ var phoneInput = document.querySelector("#phone")
 var dateFrom = document.getElementById('date-from');
 var dateTo = document.getElementById('date-to');
 var form = document.querySelector('.tour-creation__form');
+var tourSection = document.querySelector('#tours')
 //Фиксированный хэдер
 if(header) {
   window.addEventListener('scroll', function () {
@@ -64,7 +65,7 @@ function validateDateRange(dateFrom, dateTo) {
   if (!from.valid) return { field: 'from', ...from };
   if (!to.valid) return { field: 'to', ...to };
 
-  if ( from && to && to.date < from.date) return { valid: false, field: 'to', reason: 'Дата окончания раньше даты начала' };
+  if ( from && to && to.date < from.date) return { valid: false, field: 'to', reason: 'Дата окончания не может быть раньше даты начала' };
   return { valid: true };
 }
 
@@ -123,7 +124,6 @@ function applyDateMask(input) {
 function validateField(dateInput) {
   const result = validateDateStr(dateInput.value);
   dateInput.setCustomValidity(result.valid ? '' : result.reason);
-  dateInput.reportValidity();
 }
 
 function validateRange(dateFrom, dateTo) {
@@ -133,32 +133,45 @@ function validateRange(dateFrom, dateTo) {
   } else {
     dateTo.setCustomValidity('');
   }
-  dateTo.reportValidity();
 }
 
 applyDateMask(dateFrom);
 applyDateMask(dateTo);
 
-dateFrom.addEventListener('blur', function() {
+dateFrom.addEventListener('input', function() {
   validateField(dateFrom);
-
+  validateRange(dateFrom, dateTo);
 });
 
-dateTo.addEventListener('blur', function() {
+dateTo.addEventListener('input', function() {
   validateField(dateTo);
-    validateRange(dateFrom, dateTo);
+  if (dateFrom) {validateRange(dateFrom, dateTo);}
 });
 
 //Отправка формы
+if(form){
 form.addEventListener('submit', function(event) {
   event.preventDefault()
+
+  validateField(dateFrom);
+  validateField(dateTo);
+  validateRange(dateFrom, dateTo);
+
+  if (!form.checkValidity()) {
+    form.reportValidity(); 
+    return;
+  }
+
   const formData = new FormData(form);
   console.log(Array.from(formData))
   /*fetch('/example-api/submit-form', {
     method: 'POST',
     body: formData
   }) */
-  document.querySelector('#tours').scrollIntoView({ behavior: 'smooth' });
+  if(tourSection){
+    tourSection.scrollIntoView({ behavior: 'smooth' });
+  }
   form.reset();
-
+  if(tourSelect) tourSelect.classList.remove('selected');
 })
+}
