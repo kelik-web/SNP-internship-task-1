@@ -381,7 +381,11 @@ h3{
   text-wrap: nowrap;
   padding-block: 28.88px;
 }
-
+.header__logo{
+    display: flex;
+    flex-shrink: 1;
+    min-width: 133px;
+}
 .header__navigation-list {
   display: flex;
   align-items: center;
@@ -428,11 +432,11 @@ h3{
 }
 @media  screen and  (max-width:1024px){
  .header__container{
-  padding-inline: 57px;
+  padding-inline: 5.56vw;
 }
 
 .header__navigation-list{
-  column-gap:30px;
+  column-gap:2.9vw;
 }
 .hero__info {
   width: 44%;
@@ -443,7 +447,7 @@ h3{
 }
 @media (max-width:768px) {
   .header__container {
-  padding-inline: 20px;
+  padding-inline: 5.5vw;
   padding-block: 32.2px;
   }
   .header__logo-image {
@@ -586,7 +590,6 @@ width: 100%;
 }
 @media screen and (max-width: 1024px) {
   .tours__content {
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
     gap: 18px;
   }
   .card-1{
