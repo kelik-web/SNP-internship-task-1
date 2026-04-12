@@ -1107,12 +1107,16 @@ border-radius: 50%;
 @media screen and (max-width:768px) {
   .footer__container{
     padding-block: 21px;
-    gap: 7px; 
+    gap: 10px; 
     flex-direction: column;
   }
   .footer__list{
     gap: 15px;
+    margin-right: 5px;
   }
+  .footer__list__item--fb{
+  margin-right: 0px;
+}
   .footer__link {
     gap: 5px;
   }
