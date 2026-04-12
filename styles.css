@@ -499,7 +499,7 @@ h3{
 .is-current{
   color: var(--orange-200);
   text-decoration: underline;
-  text-underline-offset: 6px;
+  text-underline-offset: 8px;
 }
 
 
@@ -553,7 +553,7 @@ width: 100%;
   position: relative;
   display: inline-flex;
   align-items: center;
-  column-gap: 15px;
+  column-gap: 18px;
 }
 .link__more::after{
   content: '';
@@ -863,7 +863,7 @@ select::-ms-expand {
 .review__text{
   display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 28px;
 }
 .review__author{
 display: flex;
@@ -896,6 +896,9 @@ border-radius: 50%;
     max-width: 318px;
      padding: 21px;
   }
+  .review__text{
+    gap: 23px;
+}
   .review__author{
     margin-top: 40px;
   }
@@ -1089,9 +1092,13 @@ border-radius: 50%;
   padding-block: 30px;
 }
 .footer__list{
+  margin-right: 2px;
   display: flex;
   gap:25px
 } 
+.footer__list__item--fb{
+  margin-right: 6px;
+}
 .footer__link{
   display: flex;
   align-items: center;
