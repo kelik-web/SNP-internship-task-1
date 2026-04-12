@@ -499,7 +499,7 @@ h3{
 .is-current{
   color: var(--orange-200);
   text-decoration: underline;
-  text-underline-offset: 8px;
+  text-underline-offset: 10px;
 }
 
 
