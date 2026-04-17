@@ -600,6 +600,9 @@ width: 100%;
   .tours__header{
     gap: 30px;
   }
+  .is-current{
+    text-underline-offset: 4px;
+  }
   .tours__navigation-item {
     height: 23px;
   }
