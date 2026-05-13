@@ -1,0 +1,58 @@
+.review-card {
+  background-color: var(--beige-200);
+  padding: 40px;
+  border-radius: 50px;
+
+  display: grid;
+  grid-template-rows: 1fr auto;
+  height: 100%;
+}
+@media screen and (max-width: 768px) {
+  .review-card {
+    width: 100%;
+    padding: 21px;
+  }
+}
+
+.review-card__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.review-card__text {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+@media screen and (max-width: 768px) {
+  .review-card__text {
+    gap: 23px;
+  }
+}
+
+.review-card__author {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 70px;
+}
+@media screen and (max-width: 768px) {
+  .review-card__author {
+    margin-top: 40px;
+  }
+}
+
+.review-card__author-info {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+}
+
+.review-card__tour {
+  color: var(--gray-300);
+}
+
+.review-card__author-photo {
+  width: 75px;
+  border-radius: 50%;
+}

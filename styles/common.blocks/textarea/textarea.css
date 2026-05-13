@@ -1,0 +1,4 @@
+.textarea {
+  resize: none;
+  height: max(7.6em, 132px);
+}

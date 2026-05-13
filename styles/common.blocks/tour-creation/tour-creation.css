@@ -1,0 +1,25 @@
+@media screen and (max-width: 768px) {
+  .tour-creation__header {
+    margin-bottom: 40px;
+  }
+}
+
+.tour-creation__form {
+  width: 100%;
+  max-width: 1170px;
+  background-color: var(--white);
+  border-radius: 50px;
+  padding: 70px;
+}
+@media screen and (max-width: 1024px) {
+  .tour-creation__form {
+    padding: 60px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .tour-creation__form {
+    padding: 20px;
+    padding-bottom: 43px;
+    border-radius: 30px;
+  }
+}

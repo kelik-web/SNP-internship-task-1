@@ -1,0 +1,35 @@
+.input {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+  min-height: 43px;
+  border-radius: 10px;
+  padding: 20px;
+  outline: 1px solid var(--beige-200);
+  background-color: var(--beige-100);
+  border: none;
+}
+@media screen and (max-width: 768px) {
+  .input {
+    padding: 10px;
+  }
+}
+.input::placeholder {
+  color: var(--gray-300);
+}
+@media (hover: hover) and (pointer: fine) {
+  .input:hover {
+    cursor: pointer;
+    background-color: var(--beige-200);
+  }
+  .input:focus {
+    outline-color: var(--gray-300);
+  }
+}
+.input:user-invalid {
+  outline-color: red;
+}
+
+.input--date {
+  text-transform: uppercase;
+}

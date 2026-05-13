@@ -1,0 +1,14 @@
+.reviews__header {
+  width: 20em;
+}
+.reviews__content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(318px, 1fr));
+  align-items: stretch;
+  gap: 30px;
+}
+@media screen and (max-width: 1024px) {
+  .reviews__content {
+    gap: 18px;
+  }
+}

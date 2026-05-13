@@ -1,0 +1,17 @@
+.select {
+  min-height: 46px;
+  color: var(--gray-300);
+  background-image: url(./icons/select-dropdown.svg);
+  background-repeat: no-repeat;
+  background-position: 95% center;
+}
+.select.selected {
+  color: black;
+}
+select::-ms-expand {
+  display: none;
+}
+
+.select__option {
+  color: var(--black);
+}

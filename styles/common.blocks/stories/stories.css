@@ -1,0 +1,9 @@
+.stories__content {
+  display: grid;
+  gap: 50px;
+}
+@media screen and (max-width: 768px) {
+  .stories__content {
+    gap: 20px;
+  }
+}

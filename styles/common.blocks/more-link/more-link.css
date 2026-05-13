@@ -1,0 +1,36 @@
+.more-link {
+  color: inherit;
+  text-decoration: none;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  column-gap: 18px;
+}
+.more-link::after {
+  content: "";
+  display: block;
+  width: 22px;
+  height: 15px;
+  background-color: currentColor;
+  mask: url(/icons/button-arrow.svg) no-repeat center;
+  mask-size: cover;
+}
+.more-link::before {
+  box-sizing: content-box;
+  content: "";
+  background-color: var(--green-400);
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  padding: 7px 20px;
+  position: absolute;
+  left: -1rem;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  .more-link:active::before {
+    background-color: var(--orange-200);
+  }
+}
