@@ -15,7 +15,7 @@
   }
 }
 @media (hover: hover) and (pointer: fine) {
-  .tour-card:hover .card__image {
+  .tour-card:hover .tour-card__picture {
     transform: scale(1.2);
   }
   .tour-card:hover .more-link::before {
