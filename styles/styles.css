@@ -5,17 +5,13 @@
 @import "/styles/variables.css";
 
 @import "/styles/common.blocks/button/button.css";
-@import "/styles/common.blocks/button/button--reset.css";
-@import "/styles/common.blocks/button/button--submit.css";
 @import "/styles/common.blocks/checkbox/checkbox.css";
 @import "/styles/common.blocks/container/container.css";
-@import "/styles/common.blocks/container/container--full.css";
 @import "/styles/common.blocks/cta/cta.css";
 @import "/styles/common.blocks/footer/footer.css";
 @import "/styles/common.blocks/form/form.css";
 @import "/styles/common.blocks/gallery/gallery.css";
 @import "/styles/common.blocks/header/header.css";
-@import "/styles/common.blocks/header/header--fixed.css";
 @import "/styles/common.blocks/input/input.css";
 @import "/styles/common.blocks/link/link.css";
 @import "/styles/common.blocks/hero/hero.css";

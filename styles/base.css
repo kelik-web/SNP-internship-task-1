@@ -9,5 +9,5 @@ button {
   color: var(--white);
 }
 section {
-  scroll-margin-top: 88px;
+  scroll-margin-top: var(--header-height);
 }

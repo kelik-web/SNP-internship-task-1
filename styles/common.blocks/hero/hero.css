@@ -1,5 +1,5 @@
 .hero {
-  padding-top: 88px;
+  padding-top: var(--header-height);
 }
 .hero__container {
   color: var(--white);

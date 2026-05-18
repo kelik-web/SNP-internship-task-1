@@ -13,6 +13,7 @@
   --gray-200: #d9dfdb;
   --gray-100: #f1f3f2;
   --fixed-menu-bg-color: #f3efe899;
+  --header-height: 88px;
   --font-family-base: "Roboto", sans-serif;
   --transition: transform 0.3s ease;
   --card-linear-gradient: linear-gradient(
@@ -30,7 +31,7 @@
   --container-padding-x: 53px;
   --container-margin-bottom: 135px;
 }
-@media (max-width: 768px) {
+@media screen and  (max-width: 768px) {
   :root {
     --container-margin-bottom: 75px;
     --container-padding-x: 20px;

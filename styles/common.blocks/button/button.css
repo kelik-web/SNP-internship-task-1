@@ -16,3 +16,27 @@
     padding: 12px;
   }
 }
+.button--submit {
+  background-color: var(--green-400);
+}
+@media (hover: hover) and (pointer: fine) {
+  .button--submit:hover {
+    background-color: var(--green-300);
+  }
+  .button--submit:active {
+    background-color: var(--green-200);
+  }
+}
+
+.button--reset {
+  background-color: var(--green-100);
+  color: var(--green-400);
+}
+@media (hover: hover) and (pointer: fine) {
+  .button--reset:hover {
+    background-color: var(--gray-100);
+  }
+  .button--reset:active {
+    background-color: var(--gray-200);
+  }
+}

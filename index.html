@@ -80,7 +80,7 @@
               </li>
             </ul>
           </nav>
-          <a href="tel:++7 999 999 99 99" class="link header__number p-normal"
+          <a href="tel:+7 999 999 99 99" class="link header__number p-normal"
             >+7 999 999 99 99
           </a>
         </div>
@@ -107,24 +107,29 @@
               <ul class="tours__navigation-list">
                 <li class="tours__navigation-item">
                   <button
+                    type="button"
                     class="tours__navigation-button p-big tours__navigation-button--current"
                   >
                     Популярные
                   </button>
                 </li>
                 <li class="tours__navigation-item">
-                  <button class="tours__navigation-button p-big">
+                  <button type="button" class="tours__navigation-button p-big">
                     Авторские
                   </button>
                 </li>
                 <li class="tours__navigation-item">
-                  <button class="tours__navigation-button p-big">Походы</button>
+                  <button type="button" class="tours__navigation-button p-big">
+                    Походы
+                  </button>
                 </li>
                 <li class="tours__navigation-item">
-                  <button class="tours__navigation-button p-big">Сплавы</button>
+                  <button type="button" class="tours__navigation-button p-big">
+                    Сплавы
+                  </button>
                 </li>
                 <li class="tours__navigation-item">
-                  <button class="tours__navigation-button p-big">
+                  <button type="button" class="tours__navigation-button p-big">
                     Велопрогулки
                   </button>
                 </li>
@@ -140,6 +145,7 @@
                 />
                 <img
                   class="tour-card__image tour-card__image--1"
+                  alt=""
                   src="./images/tours/tour-1.webp"
                 />
               </picture>
@@ -163,6 +169,7 @@
                 />
                 <img
                   class="tour-card__image"
+                  alt=""
                   src="./images/tours/tour-2.webp"
                 />
               </picture>
@@ -186,6 +193,7 @@
                 />
                 <img
                   class="tour-card__image"
+                  alt=""
                   src="./images/tours/tour-3.webp"
                 />
               </picture>
@@ -209,6 +217,7 @@
                 />
                 <img
                   class="tour-card__image"
+                  alt=""
                   src="./images/tours/tour-4.webp"
                 />
               </picture>
@@ -232,6 +241,7 @@
                 />
                 <img
                   class="tour-card__image"
+                  alt=""
                   src="./images/tours/tour-5.webp"
                 />
               </picture>
@@ -255,6 +265,7 @@
                 />
                 <img
                   class="tour-card__image"
+                  alt=""
                   src="./images/tours/tour-6.webp"
                 />
               </picture>
@@ -274,232 +285,229 @@
         </div>
       </section>
       <section class="tour-creation container" id="tour-creation">
-          <header class="tour-creation__header section-header">
-            <h2 class="section-header__title">Собери свой тур</h2>
-            <p class="section-header__info p-normal">
-              Идейные соображения высшего порядка, а также рамки и место
-              обучения кадров
-            </p>
-          </header>
-          <form method="post" class="tour-creation__form" novalidate>
-            <div class="form__wrap">
-              <div class="form__group p-normal">
-                <label class="form__label" for="name">Имя</label>
-                <input
-                  class="input"
-                  type="text"
-                  name="name"
-                  id="name"
-                  placeholder="Введите Ваше имя"
-                  autocomplete="name"
-                  required
-                  minlength="2"
-                  data-error-message="Имя должно содержать минимум 2 буквы"
-                />
-              </div>
+        <header class="tour-creation__header section-header">
+          <h2 class="section-header__title">Собери свой тур</h2>
+          <p class="section-header__info p-normal">
+            Идейные соображения высшего порядка, а также рамки и место обучения
+            кадров
+          </p>
+        </header>
+        <form method="post" class="tour-creation__form" novalidate>
+          <div class="form__wrap">
+            <div class="form__group p-normal">
+              <label class="form__label" for="name">Имя</label>
+              <input
+                class="input"
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Введите Ваше имя"
+                autocomplete="name"
+                required
+                minlength="2"
+                data-error-message="Имя должно содержать минимум 2 буквы"
+              />
+            </div>
 
-              <div class="form__group p-normal">
-                <label class="form__label" for="tour-selection"
-                  >Направление</label
-                >
-                <select
-                  class="input select"
-                  name="tour-selection"
-                  id="tour-selection"
-                  required
-                  data-error-message="Выберите направление"
-                >
-                  <option value="" disabled selected>Куда хотите ехать</option>
-                  <option class="select__option" value="Belgium">
-                    Бельгия
-                  </option>
-                  <option class="select__option" value="France">Франция</option>
-                  <option class="select__option" value="Sweden">Швеция</option>
-                </select>
-              </div>
-              <div class="form__group p-normal">
-                <label class="form__label" for="email">Email</label>
-                <input
-                  class="input"
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder="example@mail.com"
-                  autocomplete="email"
-                  required
-                  data-error-message="Введите корректный email"
-                />
-              </div>
+            <div class="form__group p-normal">
+              <label class="form__label" for="tour-selection"
+                >Направление</label
+              >
+              <select
+                class="input select"
+                name="tour-selection"
+                id="tour-selection"
+                required
+                data-error-message="Выберите направление"
+              >
+                <option value="" disabled selected>Куда хотите ехать</option>
+                <option class="select__option" value="Belgium">Бельгия</option>
+                <option class="select__option" value="France">Франция</option>
+                <option class="select__option" value="Sweden">Швеция</option>
+              </select>
+            </div>
+            <div class="form__group p-normal">
+              <label class="form__label" for="email">Email</label>
+              <input
+                class="input"
+                type="email"
+                name="email"
+                id="email"
+                placeholder="example@mail.com"
+                autocomplete="email"
+                required
+                data-error-message="Введите корректный email"
+              />
+            </div>
 
-              <div class="form__group p-normal">
-                <label class="form__label" for="phone">Телефон</label>
-                <input
-                  class="input"
-                  type="tel"
-                  name="phone"
-                  id="phone"
-                  placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _"
-                  autocomplete="tel"
-                  required
-                  minlength="16"
-                  data-error-message="Введите полный номер телефона"
-                />
-              </div>
+            <div class="form__group p-normal">
+              <label class="form__label" for="phone">Телефон</label>
+              <input
+                class="input"
+                type="tel"
+                name="phone"
+                id="phone"
+                placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _"
+                autocomplete="tel"
+                required
+                minlength="16"
+                data-error-message="Введите полный номер телефона"
+              />
+            </div>
 
-              <div class="form__group p-normal">
-                <label class="form__label" for="date-from">Дата от</label>
-                <input
-                  class="input input--date"
-                  type="text"
-                  name="date-from"
-                  id="date-from"
-                  placeholder="ДД.ММ.ГГГГ"
-                  inputmode="numeric"
-                  required
-                />
-              </div>
+            <div class="form__group p-normal">
+              <label class="form__label" for="date-from">Дата от</label>
+              <input
+                class="input input--date"
+                type="text"
+                name="date-from"
+                id="date-from"
+                placeholder="ДД.ММ.ГГГГ"
+                inputmode="numeric"
+                required
+              />
+            </div>
 
-              <div class="form__group p-normal">
-                <label class="form__label" for="date-to">Дата до</label>
-                <input
-                  class="input input--date"
-                  type="text"
-                  name="date-to"
-                  id="date-to"
-                  placeholder="ДД.ММ.ГГГГ"
-                  inputmode="numeric"
-                  required
-                />
-              </div>
+            <div class="form__group p-normal">
+              <label class="form__label" for="date-to">Дата до</label>
+              <input
+                class="input input--date"
+                type="text"
+                name="date-to"
+                id="date-to"
+                placeholder="ДД.ММ.ГГГГ"
+                inputmode="numeric"
+                required
+              />
+            </div>
 
-              <div class="form__group form__group--full p-normal">
-                <label class="form__label" for="comment">Комментарий</label>
-                <textarea
-                  class="input textarea"
-                  name="comment"
-                  id="comment"
-                ></textarea>
-              </div>
+            <div class="form__group form__group--full p-normal">
+              <label class="form__label" for="comment">Комментарий</label>
+              <textarea
+                class="input textarea"
+                name="comment"
+                id="comment"
+              ></textarea>
+            </div>
 
-              <fieldset class="form__group form__group--full p-normal">
-                <span class="form__label">Вам есть 18 лет?</span>
-                <div class="form__radios">
-                  <label class="radio">
-                    <input
-                      class="radio__input"
-                      type="radio"
-                      name="age"
-                      id="age__yes"
-                      value="yes"
-                      required
-                    />
-                    <span class="radio__custom"></span>
-                    <span for="age__yes" class="radio__text">Да</span>
-                  </label>
-                  <label class="radio">
-                    <input
-                      class="radio__input"
-                      type="radio"
-                      name="age"
-                      id="age__no"
-                      value="no"
-                    />
-                    <span class="radio__custom"></span>
-                    <span class="radio__text">Нет</span>
-                  </label>
-                </div>
-              </fieldset>
-
-              <div class="form__group form__group--full">
-                <label class="checkbox">
+            <fieldset class="form__group form__group--full p-normal">
+              <span class="form__label">Вам есть 18 лет?</span>
+              <div class="form__radios">
+                <label class="radio">
                   <input
-                    class="checkbox__input"
-                    type="checkbox"
-                    name="ruleAgreement"
-                    id="ruleAgreement"
+                    class="radio__input"
+                    type="radio"
+                    name="age"
+                    id="age__yes"
+                    value="yes"
                     required
                   />
-                  <span class="checkbox__custom"></span>
-                  <span class="checkbox__label p-small"
-                    >Нажимая кнопку, я принимаю условия
-                    <a class="link link--black link--intext" href="#!"
-                      >Лицензионного договора</a
-                    >
-                  </span>
+                  <span class="radio__custom"></span>
+                  <span class="radio__text">Да</span>
+                </label>
+                <label class="radio">
+                  <input
+                    class="radio__input"
+                    type="radio"
+                    name="age"
+                    id="age__no"
+                    value="no"
+                  />
+                  <span class="radio__custom"></span>
+                  <span class="radio__text">Нет</span>
                 </label>
               </div>
-              <fieldset class="form__actions p-normal">
-                <button type="submit" class="button button--submit">
-                  <span class="p-normal">Найти тур</span>
-                </button>
-                <button type="reset" class="button button--reset">
-                  <span class="p-normal">Сбросить</span>
-                </button>
-              </fieldset>
+            </fieldset>
+
+            <div class="form__group form__group--full">
+              <label class="checkbox">
+                <input
+                  class="checkbox__input"
+                  type="checkbox"
+                  name="ruleAgreement"
+                  id="ruleAgreement"
+                  required
+                />
+                <span class="checkbox__custom"></span>
+                <span class="checkbox__label p-small"
+                  >Нажимая кнопку, я принимаю условия
+                  <a class="link link--black link--intext" href="#!"
+                    >Лицензионного договора</a
+                  >
+                </span>
+              </label>
             </div>
-          </form>
+            <fieldset class="form__actions p-normal">
+              <button type="submit" class="button button--submit">
+                <span class="p-normal">Найти тур</span>
+              </button>
+              <button type="reset" class="button button--reset">
+                <span class="p-normal">Сбросить</span>
+              </button>
+            </fieldset>
+          </div>
+        </form>
       </section>
       <section class="reviews container" id="reviews">
-          <header class="reviews__header section-header">
-            <h2 class="section-header__title">Отзывы наших путешественников</h2>
-            <p class="section-header__info p-normal">
-              Идейные соображения высшего порядка, а также рамки и место
-              обучения кадров
-            </p>
-          </header>
-          <div class="reviews__content">
-            <div class="review-card">
-              <p class="review-card__text p-big">
+        <header class="reviews__header section-header">
+          <h2 class="section-header__title">Отзывы наших путешественников</h2>
+          <p class="section-header__info p-normal">
+            Идейные соображения высшего порядка, а также рамки и место обучения
+            кадров
+          </p>
+        </header>
+        <div class="reviews__content">
+          <div class="review-card">
+            <div class="review-card__text">
+              <p class="p-big">
                 Идейные соображения высшего порядка, а также рамки и место
                 обучения кадров обеспечивает широкому кругу (специалистов)
                 участие в формировании новых предложений. Идейные соображения
                 высшего порядка, а также начало повседневной работы по
                 формированию позиции позволяет оценить значение модели развития.
               </p>
-              <div class="review-card__author">
-                <div class="review-card__author-info">
-                  <h3 class="review-card__author-name">Мария</h3>
-                  <p class="review-card__tour p-small">Тур: Вдали от дома</p>
-                </div>
-                <img
-                  src="./images/reviews/review-maria.webp"
-                  alt="Фото Марии"
-                  class="review-card__author-photo"
-                  loading="lazy"
-                />
-              </div>
             </div>
+            <div class="review-card__author">
+              <div class="review-card__author-info">
+                <h3 class="review-card__author-name">Мария</h3>
+                <p class="review-card__tour p-small">Тур: Вдали от дома</p>
+              </div>
+              <img
+                src="./images/reviews/review-maria.webp"
+                alt="Фото Марии"
+                class="review-card__author-photo"
+                loading="lazy"
+              />
+            </div>
+          </div>
 
-            <div class="review-card">
-              <div class="review-card__text">
-                <p class="p-big">
-                  Равным образом постоянный количественный рост и сфера нашей
-                  активности играет важную роль в формировании системы обучения
-                  кадров, соответствует насущным потребностям.
-                </p>
-                <p class="p-big">
-                  Значимость этих проблем настолько очевидна, что дальнейшее
-                  развитие различных форм деятельности обеспечивает широкому
-                  кругу (специалистов) участие в формировании новых предложений.
-                  Повседневная практика показывает, что реализация намеченных
-                  плановых заданий в значительной степени обуславливает создание
-                  модели развития.
-                </p>
+          <div class="review-card">
+            <div class="review-card__text">
+              <p class="p-big">
+                Равным образом постоянный количественный рост и сфера нашей
+                активности играет важную роль в формировании системы обучения
+                кадров, соответствует насущным потребностям.
+              </p>
+              <p class="p-big">
+                Значимость этих проблем настолько очевидна, что дальнейшее
+                развитие различных форм деятельности обеспечивает широкому кругу
+                (специалистов) участие в формировании новых предложений.
+                Повседневная практика показывает, что реализация намеченных
+                плановых заданий в значительной степени обуславливает создание
+                модели развития.
+              </p>
+            </div>
+            <div class="review-card__author">
+              <div class="review-card__author-info">
+                <h3 class="review-card__author-name">Павел</h3>
+                <p class="review-card__tour p-small">Тур: Путешествие в горы</p>
               </div>
-              <div class="review-card__author">
-                <div class="review-card__author-info">
-                  <h3 class="review-card__author-name">Павел</h3>
-                  <p class="review-card__tour p-small">
-                    Тур: Путешествие в горы
-                  </p>
-                </div>
-                <img
-                  src="./images/reviews/review-pavel.webp"
-                  alt="Фото Павла"
-                  class="review-card__author-photo"
-                  loading="lazy"
-                />
-              </div>
+              <img
+                src="./images/reviews/review-pavel.webp"
+                alt="Фото Павла"
+                class="review-card__author-photo"
+                loading="lazy"
+              />
             </div>
           </div>
         </div>
@@ -599,142 +607,143 @@
               </div>
             </div>
           </div>
+        </div>
       </section>
       <section class="stories container" id="stories">
-          <header class="stories__header section-header">
-            <h2 class="section-header__title">Истории путешествий</h2>
-            <p class="section-header__info p-normal">
-              Идейные соображения высшего порядка, а также рамки и место
-              обучения кадров
-            </p>
-          </header>
-          <div class="stories__content" id="tour-history">
-            <article class="story-card">
-              <div class="story-card__image story-card__image--1"></div>
-              <div class="story-card__description">
-                <h3 class="story-card__header">Автостопом в Стамбул</h3>
-                <p class="p-normal">
-                  Идейные соображения высшего порядка, а также рамки и место
-                  обучения кадров обеспечивает широкому кругу (специалистов)
-                  участие в формировании новых предложений:
-                </p>
-                <ul class="story-card__list p-normal">
-                  <li class="story-card__list-item">вкусная еда</li>
-                  <li class="story-card__list-item">дешевый транспорт</li>
-                  <li class="story-card__list-item">красивый город.</li>
-                </ul>
-              </div>
-              <div class="story-card__footer">
-                <a href="" class="more-link p-big">Подробнее</a>
-                <ul class="story-card__footer-list p-normal">
-                  <li class="story-card__footer-item">
-                    <a
-                      href="https://web.telegram.org"
-                      target="_blank"
-                      class="link link--sm story-card__footer-link"
-                      >telegram</a
-                    >
-                  </li>
-                  <li class="story-card__footer-item">
-                    <a
-                      href="https://www.facebook.com/"
-                      target="_blank"
-                      class="link link--sm story-card__footer-link"
-                      >facebook</a
-                    >
-                  </li>
-                  <li class="story-card__footer-item">
-                    <a
-                      href="https://www.youtube.com/"
-                      target="_blank"
-                      class="link link--sm story-card__footer-link"
-                      >YouTube</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </article>
-            <article class="story-card">
-              <div class="story-card__image story-card__image--2"></div>
-              <div class="story-card__description">
-                <h3 class="story-card__header">Автостопом в Стамбул</h3>
-                <p class="p-normal">
-                  Идейные соображения высшего порядка, а также рамки и место
-                  обучения кадров обеспечивает широкому кругу (специалистов)
-                  участие в формировании новых предложений:
-                </p>
-              </div>
-              <div class="story-card__footer">
-                <a href="" class="more-link p-big">Подробнее</a>
-                <ul class="story-card__footer-list p-normal">
-                  <li class="story-card__footer-item">
-                    <a
-                      href="https://web.telegram.org"
-                      target="_blank"
-                      class="link link--sm story-card__footer-link"
-                      >telegram</a
-                    >
-                  </li>
-                  <li class="story-card__footer-item">
-                    <a
-                      href="https://www.facebook.com/"
-                      target="_blank"
-                      class="link link--sm story-card__footer-link"
-                      >facebook</a
-                    >
-                  </li>
-                  <li class="story-card__footer-item">
-                    <a
-                      href="https://vk.com"
-                      target="_blank"
-                      class="link link--sm story-card__footer-link"
-                      >ВКонтакте
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </article>
-            <article class="story-card">
-              <div class="story-card__image story-card__image--3"></div>
-              <div class="story-card__description">
-                <h3 class="story-card__header">Автостопом в Стамбул</h3>
-                <p class="p-normal">
-                  Идейные соображения высшего порядка, а также рамки и место
-                  обучения кадров обеспечивает широкому кругу (специалистов)
-                  участие в формировании новых предложений:
-                </p>
-              </div>
-              <div class="story-card__footer">
-                <a href="" class="more-link p-big">Подробнее</a>
-                <ul class="story-card__footer-list p-normal">
-                  <li class="story-card__footer-item">
-                    <a
-                      href="https://web.telegram.org"
-                      target="_blank"
-                      class="link link--sm story-card__footer-link"
-                      >telegram</a
-                    >
-                  </li>
-                  <li class="story-card__footer-item">
-                    <a
-                      href="https://www.facebook.com/"
-                      target="_blank"
-                      class="link link--sm story-card__footer-link"
-                      >facebook</a
-                    >
-                  </li>
-                  <li class="story-card__footer-item">
-                    <a
-                      href="https://vk.com"
-                      target="_blank"
-                      class="link link--sm story-card__footer-link"
-                      >ВКонтакте</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </article>
-          </div>
+        <header class="stories__header section-header">
+          <h2 class="section-header__title">Истории путешествий</h2>
+          <p class="section-header__info p-normal">
+            Идейные соображения высшего порядка, а также рамки и место обучения
+            кадров
+          </p>
+        </header>
+        <div class="stories__content" id="tour-history">
+          <article class="story-card">
+            <div class="story-card__image story-card__image--1"></div>
+            <div class="story-card__description">
+              <h3 class="story-card__header">Автостопом в Стамбул</h3>
+              <p class="p-normal">
+                Идейные соображения высшего порядка, а также рамки и место
+                обучения кадров обеспечивает широкому кругу (специалистов)
+                участие в формировании новых предложений:
+              </p>
+              <ul class="story-card__list p-normal">
+                <li class="story-card__list-item">вкусная еда</li>
+                <li class="story-card__list-item">дешевый транспорт</li>
+                <li class="story-card__list-item">красивый город.</li>
+              </ul>
+            </div>
+            <div class="story-card__footer">
+              <a href="#!" class="more-link p-big">Подробнее</a>
+              <ul class="story-card__footer-list p-normal">
+                <li class="story-card__footer-item">
+                  <a
+                    href="https://web.telegram.org"
+                    target="_blank"
+                    class="link link--sm story-card__footer-link"
+                    >telegram</a
+                  >
+                </li>
+                <li class="story-card__footer-item">
+                  <a
+                    href="https://www.facebook.com/"
+                    target="_blank"
+                    class="link link--sm story-card__footer-link"
+                    >facebook</a
+                  >
+                </li>
+                <li class="story-card__footer-item">
+                  <a
+                    href="https://www.youtube.com/"
+                    target="_blank"
+                    class="link link--sm story-card__footer-link"
+                    >YouTube</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </article>
+          <article class="story-card">
+            <div class="story-card__image story-card__image--2"></div>
+            <div class="story-card__description">
+              <h3 class="story-card__header">Автостопом в Стамбул</h3>
+              <p class="p-normal">
+                Идейные соображения высшего порядка, а также рамки и место
+                обучения кадров обеспечивает широкому кругу (специалистов)
+                участие в формировании новых предложений:
+              </p>
+            </div>
+            <div class="story-card__footer">
+              <a href="#!" class="more-link p-big">Подробнее</a>
+              <ul class="story-card__footer-list p-normal">
+                <li class="story-card__footer-item">
+                  <a
+                    href="https://web.telegram.org"
+                    target="_blank"
+                    class="link link--sm story-card__footer-link"
+                    >telegram</a
+                  >
+                </li>
+                <li class="story-card__footer-item">
+                  <a
+                    href="https://www.facebook.com/"
+                    target="_blank"
+                    class="link link--sm story-card__footer-link"
+                    >facebook</a
+                  >
+                </li>
+                <li class="story-card__footer-item">
+                  <a
+                    href="https://vk.com"
+                    target="_blank"
+                    class="link link--sm story-card__footer-link"
+                    >ВКонтакте
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </article>
+          <article class="story-card">
+            <div class="story-card__image story-card__image--3"></div>
+            <div class="story-card__description">
+              <h3 class="story-card__header">Автостопом в Стамбул</h3>
+              <p class="p-normal">
+                Идейные соображения высшего порядка, а также рамки и место
+                обучения кадров обеспечивает широкому кругу (специалистов)
+                участие в формировании новых предложений:
+              </p>
+            </div>
+            <div class="story-card__footer">
+              <a href="#!" class="more-link p-big">Подробнее</a>
+              <ul class="story-card__footer-list p-normal">
+                <li class="story-card__footer-item">
+                  <a
+                    href="https://web.telegram.org"
+                    target="_blank"
+                    class="link link--sm story-card__footer-link"
+                    >telegram</a
+                  >
+                </li>
+                <li class="story-card__footer-item">
+                  <a
+                    href="https://www.facebook.com/"
+                    target="_blank"
+                    class="link link--sm story-card__footer-link"
+                    >facebook</a
+                  >
+                </li>
+                <li class="story-card__footer-item">
+                  <a
+                    href="https://vk.com"
+                    target="_blank"
+                    class="link link--sm story-card__footer-link"
+                    >ВКонтакте</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
       </section>
       <section class="cta">
         <div class="container cta__container">

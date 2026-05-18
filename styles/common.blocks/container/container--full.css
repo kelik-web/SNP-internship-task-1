@@ -1,6 +1,0 @@
-.container--full {
-  max-width: calc(1860px + 20px * 2);
-  padding-inline: 20px;
-  margin-inline: auto;
-  margin-bottom: var(--container-margin-bottom);
-}
